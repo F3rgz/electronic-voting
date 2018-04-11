@@ -1,0 +1,36 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  width: 100vw;
+}
+.black {
+  color: black;
+}
+h1, h2 {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  color: #AAA;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px;
+}
+
+.header {
+  height: 10vh;
+  margin: 0;
+
+  width: 100%;
+
+  padding-left: 5rem;
+  padding-top: 2rem;
+}

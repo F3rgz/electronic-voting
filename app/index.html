@@ -1,23 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MetaCoin - Truffle Webpack Demo w/ Frontend</title>
+  <title>Electronic Voting</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <script src="./app.js"></script>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <script type="text/javascript" src="../node_modules/web3/dist/web3.min.js"></script>
+  <script type="text/javascript" src="../node_modules/truffle-contract.min.js"></script> -->
+
 </head>
 <body>
-  <h1>MetaCoin</h1>
-  <h2>Example Truffle Dapp</h2>
-  <h3>You have <span class="black"><span id="balance"></span> META</span></h3>
 
-  <br>
-  <h1>Send MetaCoin</h1>
-  <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
-  <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
-  <br><br><button id="send" onclick="App.sendCoin()">Send MetaCoin</button>
-  <br><br>
-  <span id="status"></span>
-  <br>
-  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+  <nav>
+    <div class="nav-wrapper blue-grey darken-1">
+      <a href="#" class="brand-logo">Electronic Voting : On a Blockchain</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down nav-links">
+        <li><a href="https://www.ethereum.org/">Ethereum</a></li>
+        <li><a href="http://solidity.readthedocs.io/en/v0.4.21/">Solidity</a></li>
+        <li><a href="http://truffleframework.com/">Truffle</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col s4 section">
+      <h2 class="">Create an Election</h2>
+      <!--  Set NAME -->
+      <div class="card blue-grey darken-1 col s11">
+        <form>
+          <label for='setName' class='form-label'>Set Elections Name:</label>
+          <input type='text' placeholder="General Election" name='setName' class='input-field' id="set-name-field"/>
+          <input type='submit' id='setName' class='button' />
+        </form>
+      </div>
+      <!-- SET CANDIDATES -->
+      <div class="card blue-grey darken-1 col s11">
+        <form>
+          <label for='setName' class='form-label'>Add Candidates: (One at a time)</label>
+          <input type='text' placeholder="Prof. Zoidberg" name='setName' class='input-field' id="candidate-field"/>
+
+          <input type='submit' id='addCandidate' class='button' />
+        </form>
+      </div>
+
+      <div class="card blue-grey darken-1 col s11">
+        <h2>Register Voters</h2>
+        <input type='submit' id="genVoters" value="Generate Voters"/>
+        <form>
+          <label for='addVoters' class='form-label'>Select Voters:</label>
+          <div id="voter-select">
+
+          </div>
+          <input type='submit' id="select-all" value="Select All"/>
+          <input type='submit' id="submit-voters" value="Register Voters"/>
+        </form>
+      </div>
+
+
+    </div>
+
+    <div class="col s4 section">
+      <h2>Election Ballots</h2>
+      <input type='submit' class="center" id='start-election' value='Start Election' />
+      <div class="col s10">
+        <div class="electionInfo">
+          <p class="" id="elec-name">
+          </p>
+          <p class="" id="elec-num-candidates">
+          </p>
+          <p class="" id="elec-num-voters">
+          </p>
+        </div>
+      </div>
+
+      <div id="ballot-section">
+
+      </div>
+    </div>
+
+    <div class="col s4 section">
+      <h2>Election Results</h2>
+      <input type='submit' class="center" id='end-election' value='End Election' />
+      <div id="election-results " class='card col s12 blue-grey darken-1'>
+        <p id='res1'>
+
+        </p>
+        <p id='res2'>
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="./app.js"></script>
+
 </body>
 </html>
